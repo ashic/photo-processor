@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "photo-processor"
+version = "0.1.0"
+description = "Photo processing toolkit"
+authors = ["ashic <ashic@live.com>"]
+license = "Moz-2"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+fire = "^0.6.0"
+pillow = "^10.4.0"
+exif = "^1.6.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
