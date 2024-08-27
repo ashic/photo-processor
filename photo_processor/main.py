@@ -4,6 +4,8 @@ from exif import Image as ExifImage
 from PIL import Image as PillowImage
 from PIL import ExifTags
 import json
+import pandas as pd
+from photo_processor import organise
 
 def fix_photographed_date(dir: str, file: str):
     path = os.path.join(dir, file)
@@ -29,15 +31,15 @@ def fix_photographed_date(dir: str, file: str):
     except:
         print(f'..could not process {path}. Likely a non-image file.')
 
-    
-
 
 class Processor:
 
     def fix_date(self, path: str):
         for file in os.listdir(path):
                 fix_photographed_date(path, file)
-            
+    
+    def organise(self, path: str, mapping_file: str):
+        organise.organise(path, mapping_file)
             
 
 
