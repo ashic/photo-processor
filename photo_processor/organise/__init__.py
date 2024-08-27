@@ -15,7 +15,6 @@ def get_folder(time, df):
 def prepare_df(df):
     df = df.sort_values('start_time').reset_index(drop=True)
     df = df[['folder', 'start_time']]
-    print(df)
 
     return df
 
